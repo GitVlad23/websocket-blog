@@ -11,11 +11,13 @@
 </head>
 <body>
     
-    <h1>Hello World!</h1>
+    <h1 id="rabbit">Hello World!</h1>
 
     <div>
         <p id="message"></p>
     </div>
+
+    <button type="submit" onclick="rabbit()">Rabbit</button>
 
     <script>
         let socket = new WebSocket("ws://192.168.3.5:8080");
@@ -43,6 +45,11 @@
         socket.onerror = function(error) {
           alert(`[error] ${error.message}`);
         };
+
+        function rabbit()
+        {
+            getElementById('rabbit').append('Rabbits!');
+        }
     </script>
 
 </body>

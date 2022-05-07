@@ -23,7 +23,7 @@
         socket.onopen = function(e) {
           console.log("[open] Соединение установлено");
           console.log("Отправляем данные на сервер");
-          socket.send("Меня зовут Джон");
+          socket.send('{"message": "new room", "value": "one"}');
         };
 
         socket.onmessage = function(event) {
